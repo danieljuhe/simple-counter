@@ -1,4 +1,5 @@
 //import react into the bundle
+import { checkPropTypes } from "prop-types";
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -9,4 +10,9 @@ import "../styles/index.css";
 import Home from "./component/home.jsx";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+let time = 0;
+
+setInterval (function counter(){time++;
+
+ReactDOM.render(<Home one={time} two={time} three={time} four={time} five={time}/>, document.querySelector("#app"));
+},1000);
