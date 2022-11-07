@@ -12,7 +12,13 @@ import Home from "./component/home.jsx";
 //render your react application
 let time = 0;
 
-setInterval (function counter(){time++;
+setInterval (function counter(){
+    time++;
+    let one = Math.floor(time/10000);
+    let two = Math.floor(time/1000);
+    let three = Math.floor(time/100);
+    let four = Math.floor(time/10);
+    let five = Math.floor(time/1);
 
-ReactDOM.render(<Home one={time} two={time} three={time} four={time} five={time}/>, document.querySelector("#app"));
+ReactDOM.render(<Home one={one} two={two} three={three} four={four} five={five}/>, document.querySelector("#app"));
 },1000);
