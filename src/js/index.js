@@ -13,17 +13,14 @@ import Home from "./component/home.jsx";
 
 let time = 0;
 
-function stop(){
-    clearInterval(tr);
-}
 
-var tr = setInterval (function counter(){
+export var tr = setInterval (function counter(){
 
     time++;
-    let one = Math.floor(time/128);
-    let two = Math.floor(time/32);
-    let three = Math.floor(time/8);
-    let four = Math.floor(time/2);
+    let one = Math.floor(time/10000);
+    let two = Math.floor(time/1000);
+    let three = Math.floor(time/100);
+    let four = Math.floor(time/10);
     let five = Math.floor(time/1);
 
 
